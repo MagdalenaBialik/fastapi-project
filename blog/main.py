@@ -8,5 +8,5 @@ models.Base.metadata.create_all(engine)
 
 
 @app.post("/blog")
-def create(request: schemas.Blog):
-    return request
+def create(request: schemas.Blog, db):
+    return db
